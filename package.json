@@ -1,6 +1,6 @@
 {
-  "name": "superset-indicator-chart",
-  "version": "0.0.7",
+  "name": "superset-indicator-chart-ebosi",
+  "version": "0.0.8",
   "description": "Indicator chart plugin for Apache Superset",
   "main": "src/chart.ts",
   "scripts": {
@@ -18,7 +18,7 @@
     "chart",
     "plugin"
   ],
-  "author": "Ivan Krsnik",
+  "author": "Étienne Boisseau-Sierra",
   "license": "Apache-2.0",
   "dependencies": {
     "antd": "^4.9.4",
@@ -52,7 +52,7 @@
     "@superset-ui/translation": "^0.14.0",
     "@superset-ui/legacy-preset-chart-deckgl": "^0.4.7",
     "react": "^16.13.1",
-    "@superset-ui/core": "^0.17.55",
+    "@superset-ui/core": "^0.17.55"
   },
   "husky": {
     "hooks": {
@@ -64,6 +64,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/krsnik93/superset-indicator-chart"
+    "url": "https://github.com/EBoisseauSierra/superset-indicator-chart"
   }
 }
