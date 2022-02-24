@@ -31,7 +31,7 @@ export default function IndicatorChart(chartProps: ChartProps) {
       {markdowns.map((markdown, index) => (
         <div
           style={{
-            flex: '0 1 25ex',
+            flex: '1 1 25ex',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
