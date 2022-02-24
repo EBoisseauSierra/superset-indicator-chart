@@ -21,6 +21,8 @@ export default function IndicatorChart(chartProps: ChartProps) {
         flexDirection: orientation === 'horizontal' ? 'row' : 'column',
         flexWrap: 'wrap',
         justifyContent: 'space-between',
+        alignContent: 'stretch',
+        gap: '1ex',
         height: height,
         width: width,
       }}
@@ -29,7 +31,7 @@ export default function IndicatorChart(chartProps: ChartProps) {
       {markdowns.map((markdown, index) => (
         <div
           style={{
-            flex: 1,
+            flex: '0 1 25ex',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
