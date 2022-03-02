@@ -17,12 +17,9 @@ export default function IndicatorChart(chartProps: ChartProps) {
   return (
     <div
       style={{
-        display: 'flex',
-        flexDirection: orientation === 'horizontal' ? 'row' : 'column',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
-        alignContent: 'stretch',
-        gap: '1ex',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(24em, 1fr))',
+        gap: '1em',
         height: height,
         width: width,
       }}
@@ -31,16 +28,11 @@ export default function IndicatorChart(chartProps: ChartProps) {
       {markdowns.map((markdown, index) => (
         <div
           style={{
-            flex: '1 1 25ex',
-            display: 'flex',
-            flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
             backgroundColor: backgroundColors[index],
             borderRadius: roundedCorners ? '0.5em' : 0,
             color: textColor === 'light' ? 'gainsboro' : '#404040',
-            marginBottom: 10,
-            marginRight: 10,
             padding: '1ex',
           }}
           className="item"
