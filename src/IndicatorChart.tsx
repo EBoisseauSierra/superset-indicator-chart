@@ -18,7 +18,7 @@ export default function IndicatorChart(chartProps: ChartProps) {
     <div
       style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(24em, 1fr))',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(17em, 1fr))',
         gap: '1em',
         height: height,
         width: width,
