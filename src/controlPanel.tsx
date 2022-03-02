@@ -1,30 +1,59 @@
 import { t } from '@superset-ui/core';
 import {
-  formatSelectOptions,
+  D3_FORMAT_DOCS,
   D3_FORMAT_OPTIONS,
+  formatSelectOptions,
   sections,
+  emitFilterControl,
+  ControlPanelConfig,
 } from '@superset-ui/chart-controls';
 import { DEFAULT_FORM_DATA } from './constants';
 import { jsFunctionControl } from './utils';
 
 
-export default {
+const config: ControlPanelConfig = {
   controlPanelSections: [
-    sections.legacyRegularTime,
+    sections.legacyTimeseriesTime,
     {
       label: t('Query'),
       expanded: true,
       tabOverride: 'data',
       controlSetRows: [
-        ['groupby'],
         ['metrics'],
         ['adhoc_filters'],
+        emitFilterControl,
+        ['groupby'],
         ['series_limit_metric'],
+      ],
+    },
+    {
+      label: t('Chart Contents'),
+      expanded: true,
+      controlSetRows: [
+        [
+          {
+            name: 'markdown',
+            config: {
+              type: 'TextAreaControl',
+              label: t('Content'),
+              default: DEFAULT_FORM_DATA.markdown,
+              language: 'markdown',
+              offerEditInModal: true,
+              renderTrigger: true,
+            },
+          },
+        ],
+      ],
+    },
+    {
+      label: t('Chart Design'),
+      expanded: true,
+      controlSetRows: [
         [
           {
             name: 'data_color_mapper',
             config: jsFunctionControl(
-              t('Data color mapper'),
+              t('Background colour'),
               t(
                 'Define a javascript function that receives the data array used in the visualization ' +
                 'and is expected to return a hex color code which will be used as the background color. ',
@@ -33,25 +62,6 @@ export default {
               100,
               DEFAULT_FORM_DATA.data_color_mapper,
             ),
-          },
-        ],
-      ],
-    },
-    {
-      label: t('Chart Options'),
-      expanded: true,
-      controlSetRows: [
-        [
-          {
-            name: 'markdown',
-            config: {
-              type: 'TextAreaControl',
-              label: t('Markdown'),
-              default: DEFAULT_FORM_DATA.markdown,
-              language: 'markdown',
-              offerEditInModal: true,
-              renderTrigger: true,
-            },
           },
         ],
         [
@@ -72,11 +82,11 @@ export default {
             config: {
               type: 'SelectControl',
               label: t('Number format'),
-              description: 'D3 format syntax: https://github.com/d3/d3-format',
               freeForm: true,
               renderTrigger: true,
               default: DEFAULT_FORM_DATA.number_format,
               choices: D3_FORMAT_OPTIONS,
+              description: D3_FORMAT_DOCS,
             },
           },
         ],
@@ -108,4 +118,18 @@ export default {
       ],
     },
   ],
+  controlOverrides: {
+    groupby: {
+      label: t('Series'),
+      description: t('Categories to group by on the x-axis.'),
+    },
+    columns: {
+      label: t('Distribute across'),
+      multi: true,
+      description: t(
+        'Columns to calculate distribution across. Defaults to temporal column if left empty.',
+      ),
+    },
+  }
 };
+export default config;
