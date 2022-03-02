@@ -13,7 +13,7 @@ import { jsFunctionControl } from './utils';
 
 const config: ControlPanelConfig = {
   controlPanelSections: [
-    sections.legacyTimeseriesTime,
+    sections.legacyRegularTime,
     {
       label: t('Query'),
       expanded: true,
@@ -118,18 +118,5 @@ const config: ControlPanelConfig = {
       ],
     },
   ],
-  controlOverrides: {
-    groupby: {
-      label: t('Series'),
-      description: t('Categories to group by on the x-axis.'),
-    },
-    columns: {
-      label: t('Distribute across'),
-      multi: true,
-      description: t(
-        'Columns to calculate distribution across. Defaults to temporal column if left empty.',
-      ),
-    },
-  }
 };
 export default config;
