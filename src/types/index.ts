@@ -1,13 +1,13 @@
 import { AdhocFilter, QueryFormData, QueryFormMetric } from '@superset-ui/core';
 
 export type ChartProps = {
-    markdowns: string [];
-    backgroundColors: string[];
-    textColor: string;
-    orientation: string;
-    roundedCorners: boolean;
-    height: number;
-    width: number;
+  markdowns: string[];
+  backgroundColors: string[];
+  textColor: string;
+  itemMinWidth: number;
+  roundedCorners: boolean;
+  height: number;
+  width: number;
 };
 
 export type FormData = QueryFormData & {
@@ -18,7 +18,7 @@ export type FormData = QueryFormData & {
   metrics: QueryFormMetric[];
   number_format: string;
   order_desc: boolean;
-  orientation: string;
+  item_min_width: number;
   rounded_corners: boolean;
   text_color: string;
 };

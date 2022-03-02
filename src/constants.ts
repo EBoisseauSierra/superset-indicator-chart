@@ -27,8 +27,8 @@ export const DEFAULT_FORM_DATA: FormData = {
   metrics: [],
   number_format: 'SMART_NUMBER',
   order_desc: true,
-  orientation: 'horizontal',
   rounded_corners: true,
   text_color: 'dark',
   viz_type: '',
+  item_min_width: 12,
 };

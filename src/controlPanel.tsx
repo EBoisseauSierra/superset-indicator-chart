@@ -37,7 +37,7 @@ export default {
               t('Data color mapper'),
               t(
                 'Define a javascript function that receives the data array used in the visualization ' +
-                  'and is expected to return a hex color code which will be used as the background color. ',
+                'and is expected to return a hex color code which will be used as the background color. ',
               ),
               null,
               100,
@@ -92,14 +92,15 @@ export default {
         ],
         [
           {
-            name: 'orientation',
+            name: 'itemMinWidth',
             config: {
-              type: 'SelectControl',
-              label: t('Orientation'),
-              description: 'How to align multiple indicators',
-              choices: formatSelectOptions(['horizontal', 'vertical']),
-              default: DEFAULT_FORM_DATA.orientation,
+              type: 'SliderControl',
+              label: t('Item minimal width'),
+              description: t('Minimal width a block should have'),
               renderTrigger: true,
+              min: 6,
+              max: 256,
+              default: DEFAULT_FORM_DATA.item_min_width,
             },
           },
         ],

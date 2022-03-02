@@ -3,7 +3,6 @@
 ## Features
 * markdown field for customizing layout
 * function field for defining data to background color mapping
-* horizontal or vertical orientation of multiple items when query result has multiple rows
 
 ## Screenshots
 

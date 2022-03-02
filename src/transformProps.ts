@@ -54,7 +54,7 @@ export default function transformProps(chartProps: ChartProps) {
     dataColorMapper,
     textColor,
     markdown,
-    orientation,
+    itemMinWidth,
     numberFormat,
     roundedCorners,
   } = formData;
@@ -70,7 +70,7 @@ export default function transformProps(chartProps: ChartProps) {
     markdowns,
     backgroundColors,
     textColor,
-    orientation,
+    itemMinWidth,
     roundedCorners,
   };
 
