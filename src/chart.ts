@@ -9,7 +9,7 @@ import { FormData } from './types';
 const metadata = new ChartMetadata({
   description:
     'Indicator chart plugin for Apache Superset',
-  name: t('Indicator'),
+  name: t('Unipart Indicator'),
   thumbnail,
   useLegacyApi: false,
 });
