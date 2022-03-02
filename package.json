@@ -1,6 +1,6 @@
 {
-  "name": "superset-indicator-chart",
-  "version": "0.0.8",
+  "name": "superset-indicator-chart-unipart",
+  "version": "0.1.0",
   "description": "Indicator chart plugin for Apache Superset",
   "main": "src/chart.ts",
   "scripts": {
@@ -18,7 +18,7 @@
     "chart",
     "plugin"
   ],
-  "author": "Ivan Krsnik",
+  "author": "Ivan Krsnik, Étienne Boisseau-Sierra",
   "license": "Apache-2.0",
   "dependencies": {
     "antd": "^4.9.4",
@@ -59,6 +59,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/krsnik93/superset-indicator-chart"
+    "url": "https://github.com/EBoisseauSierra/superset-indicator-chart"
   }
 }
