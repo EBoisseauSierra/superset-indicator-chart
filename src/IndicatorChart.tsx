@@ -23,7 +23,6 @@ export default function IndicatorChart(chartProps: ChartProps) {
         height: height,
         width: width,
       }}
-      className="container"
     >
       {markdowns.map((markdown, index) => (
         <div
@@ -35,7 +34,6 @@ export default function IndicatorChart(chartProps: ChartProps) {
             color: textColor === 'light' ? 'gainsboro' : '#404040',
             padding: '1ex',
           }}
-          className="item"
         >
           <SafeMarkdown source={markdown} />
         </div>
