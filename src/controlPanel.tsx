@@ -19,14 +19,22 @@ export default {
         ['groupby'],
         ['metrics'],
         ['adhoc_filters'],
+        ['series_limit_metric'],
         [
           {
-            name: 'order_desc',
+            name: 'order_by_cols',
             config: {
-              type: 'CheckboxControl',
-              label: t('Sort descending'),
-              default: DEFAULT_FORM_DATA.order_desc,
-              description: t('Whether to sort descending or ascending'),
+              type: 'SelectControl',
+              label: t('Ordering'),
+              description: t('Order results by selected columns'),
+              multi: true,
+              default: [],
+              mapStateToProps: ({ datasource }) => ({
+                choices: datasource?.order_by_choices || [],
+              }),
+              visibility: true,
+              sortComparator: (a: { label: string }, b: { label: string }) =>
+                a.label.localeCompare(b.label),
             },
           },
         ],
