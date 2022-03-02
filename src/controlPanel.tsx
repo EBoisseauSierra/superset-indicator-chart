@@ -19,17 +19,6 @@ export default {
         ['groupby'],
         ['metrics'],
         ['adhoc_filters'],
-        [
-          {
-            name: 'order_desc',
-            config: {
-              type: 'CheckboxControl',
-              label: t('Sort descending'),
-              default: DEFAULT_FORM_DATA.order_desc,
-              description: t('Whether to sort descending or ascending'),
-            },
-          },
-        ],
         ['series_limit_metric'],
         [
           {

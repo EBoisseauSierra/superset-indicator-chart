@@ -17,7 +17,7 @@ export type FormData = QueryFormData & {
   markdown: string;
   metrics: QueryFormMetric[];
   number_format: string;
-  order_desc: boolean;
+  // order_desc: boolean;
   item_min_width: number;
   rounded_corners: boolean;
   text_color: string;
