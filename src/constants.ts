@@ -2,20 +2,22 @@ import { FormData } from './types';
 
 const defaultDataColorMapper = `
 function dataColorMapper(data) {
-  if (data['count'] < 10){
-    return '#ED1C24';
+  if (data.temperature >= 17 & data.temperature <= 23){
+      return '#5AC189';
+  }
+  else if (data.temperature > 16 & data.temperature < 24) {
+      return '#FCC700';
   }
   else {
-    return '#0BDA51';
+      return '#E04355';
   }
 }
 `;
 
 const defaultMarkdown = `
-Count
-=====
+{{connection_status}} **{{logger_title}}**
 
-{{count}}
+{{temperature}} °C
 `;
 
 export const DEFAULT_FORM_DATA: FormData = {

@@ -26,25 +26,25 @@ const config: ControlPanelConfig = {
         ['series_limit_metric'],
       ],
     },
-    // {
-    //   label: t('Chart Contents'),
-    //   expanded: true,
-    //   controlSetRows: [
-    //     [
-    //       {
-    //         name: 'markdown',
-    //         config: {
-    //           type: 'TextAreaControl',
-    //           label: t('Content'),
-    //           default: DEFAULT_FORM_DATA.markdown,
-    //           language: 'markdown',
-    //           offerEditInModal: true,
-    //           renderTrigger: true,
-    //         },
-    //       },
-    //     ],
-    //   ],
-    // },
+    {
+      label: t('Chart Contents'),
+      expanded: true,
+      controlSetRows: [
+        [
+          {
+            name: 'markdown',
+            config: {
+              type: 'TextAreaControl',
+              label: t('Content'),
+              default: DEFAULT_FORM_DATA.markdown,
+              language: 'markdown',
+              offerEditInModal: true,
+              renderTrigger: true,
+            },
+          },
+        ],
+      ],
+    },
     {
       label: t('Chart Design'),
       expanded: true,
